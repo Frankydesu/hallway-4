@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ci5f4uu7rxufh"]
+
+[ext_resource type="Script" uid="uid://bwhh2e063a675" path="res://xr_tools_pickable.gd" id="1_a8lhv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5isd3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ob2d4"]
+
+[node name="XRToolsPickable" type="RigidBody3D" unique_id=435517238]
+script = ExtResource("1_a8lhv")
+picked_up_layer = 65538
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2087595845]
+mesh = SubResource("BoxMesh_5isd3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=575610730]
+shape = SubResource("BoxShape3D_ob2d4")

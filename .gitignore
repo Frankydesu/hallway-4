@@ -1,0 +1,22 @@
+# Godot-specific ignores
+.godot/
+# ถ้าใช้ Godot 3 ให้เปลี่ยนเป็น .import/
+# .import/
+
+# ข้อมูลที่จำเพาะกับเครื่องเรา (เช่น หน้าต่างที่เปิดค้างไว้)
+export_presets.cfg
+.fscache/
+
+# ไฟล์ผลลัพธ์จากการ Build
+android/
+build/
+bin/
+
+# ไฟล์จากโปรแกรม 3D (ถ้าคุณไม่อยากเอาไฟล์ดิบขึ้น)
+*.blend
+*.blend1
+*.fbx
+
+# ไฟล์ระบบ
+.DS_Store
+Thumbs.db
