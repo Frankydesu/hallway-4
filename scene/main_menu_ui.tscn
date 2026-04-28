@@ -48,13 +48,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "START GAME"
 
-[node name="OptionsButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1115022695]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 60)
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "OPTIONS"
-
 [node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=2092728843]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 60)
