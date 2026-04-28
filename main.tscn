@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cefdfja6wlet7"]
 
-[ext_resource type="Script" uid="uid://0ytsg442olsc" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://0ytsg442olsc" path="res://scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="3_5vw27"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="3_lquwl"]
@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://b18kkstg643yw" path="res://addons/godot-xr-tools/functions/function_pickup.gd" id="6_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://c2q5phg8w08o" path="res://addons/godot-xr-tools/functions/movement_jump.tscn" id="7_dg77c"]
 [ext_resource type="PackedScene" uid="uid://clt88d5d1dje4" path="res://addons/godot-xr-tools/functions/movement_crouch.tscn" id="8_ycdy4"]
-[ext_resource type="Script" uid="uid://b6xepw2vasxc" path="res://game_manager.gd" id="11_dg77c"]
+[ext_resource type="Script" uid="uid://b6xepw2vasxc" path="res://scripts/game_manager.gd" id="11_dg77c"]
 [ext_resource type="PackedScene" uid="uid://doeo16pr0u53i" path="res://hallwaymap.tscn" id="11_efxa6"]
 [ext_resource type="PackedScene" uid="uid://ci5f4uu7rxufh" path="res://xr_tools_pickable.tscn" id="12_dg77c"]
 

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://co5iwfllgddqj"]
+
+[ext_resource type="Script" uid="uid://bwhh2e063a675" path="res://scripts/xr_tools_pickable.gd" id="1_ljcgb"]
+[ext_resource type="PackedScene" uid="uid://bp8uquf1s483b" path="res://assets/models/Headphone.glb" id="2_ljcgb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nvpgv"]
+
+[node name="XRToolsPickable" type="RigidBody3D" unique_id=435517238 groups=["keys"]]
+script = ExtResource("1_ljcgb")
+picked_up_layer = 65538
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=280340267]
+
+[node name="Headphone" parent="MeshInstance3D" unique_id=529770548 instance=ExtResource("2_ljcgb")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=339139007]
+shape = SubResource("BoxShape3D_nvpgv")
+script = ExtResource("1_ljcgb")
