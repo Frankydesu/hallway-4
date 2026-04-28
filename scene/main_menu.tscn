@@ -1,0 +1,56 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="1_start_xr"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="2_left_hand"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="3_right_hand"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="4_pointer"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="5_viewport_panel"]
+[ext_resource type="PackedScene" path="res://scene/main_menu_ui.tscn" id="6_menu_ui"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_menu"]
+sky_top_color = Color(0.1, 0.1, 0.2, 1)
+sky_horizon_color = Color(0.2, 0.2, 0.3, 1)
+
+[sub_resource type="Sky" id="Sky_menu"]
+sky_material = SubResource("ProceduralSkyMaterial_menu")
+
+[sub_resource type="Environment" id="Environment_menu"]
+background_mode = 2
+sky = SubResource("Sky_menu")
+tonemap_mode = 2
+
+[node name="MainMenuVR" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_menu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.5, 0.866, 0, -0.866, -0.5, 0, 5, 0)
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="LeftHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="LeftHandModel" parent="XROrigin3D/LeftHand" instance=ExtResource("2_left_hand")]
+
+[node name="RightHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="RightHandModel" parent="XROrigin3D/RightHand" instance=ExtResource("3_right_hand")]
+
+[node name="XRToolsFunctionPointer" parent="XROrigin3D/RightHand" instance=ExtResource("4_pointer")]
+show_laser = 2
+
+[node name="StartXR" parent="." instance=ExtResource("1_start_xr")]
+
+[node name="MenuPanel" parent="." instance=ExtResource("5_viewport_panel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -2)
+screen_size = Vector2(2, 1.2)
+viewport_size = Vector2(1024, 600)
+scene = ExtResource("6_menu_ui")

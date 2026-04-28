@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c2q5phg8w08o" path="res://addons/godot-xr-tools/functions/movement_jump.tscn" id="7_dg77c"]
 [ext_resource type="PackedScene" uid="uid://clt88d5d1dje4" path="res://addons/godot-xr-tools/functions/movement_crouch.tscn" id="8_ycdy4"]
 [ext_resource type="Script" uid="uid://b6xepw2vasxc" path="res://scripts/game_manager.gd" id="11_dg77c"]
-[ext_resource type="PackedScene" uid="uid://doeo16pr0u53i" path="res://hallwaymap.tscn" id="11_efxa6"]
-[ext_resource type="PackedScene" uid="uid://ci5f4uu7rxufh" path="res://xr_tools_pickable.tscn" id="12_dg77c"]
-[ext_resource type="PackedScene" uid="uid://co5iwfllgddqj" path="res://KeyItem.tscn" id="12_w48qg"]
+[ext_resource type="PackedScene" uid="uid://doeo16pr0u53i" path="res://scene/hallwaymap.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://ci5f4uu7rxufh" path="res://scene/xr_tools_pickable.tscn" id="12_dg77c"]
+[ext_resource type="PackedScene" uid="uid://co5iwfllgddqj" path="res://scene/KeyItem.tscn" id="12_w48qg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_272bh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
