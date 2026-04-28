@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://b6xepw2vasxc" path="res://scripts/game_manager.gd" id="11_dg77c"]
 [ext_resource type="PackedScene" uid="uid://doeo16pr0u53i" path="res://hallwaymap.tscn" id="11_efxa6"]
 [ext_resource type="PackedScene" uid="uid://ci5f4uu7rxufh" path="res://xr_tools_pickable.tscn" id="12_dg77c"]
+[ext_resource type="PackedScene" uid="uid://co5iwfllgddqj" path="res://KeyItem.tscn" id="12_w48qg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_272bh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -121,11 +122,14 @@ shape = SubResource("BoxShape3D_dg77c")
 [node name="HallWay" parent="." unique_id=467713607 instance=ExtResource("11_efxa6")]
 transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)
 
+[node name="XRToolsPickable5" parent="." unique_id=435517238 instance=ExtResource("12_w48qg")]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 10.275693, 1.519101, 20.698385)
+
 [node name="GameManager" type="Node3D" parent="." unique_id=2005501150 node_paths=PackedStringArray("victory_door")]
 script = ExtResource("11_dg77c")
 victory_door = NodePath("../VictoryDoor")
 
-[node name="XRToolsPickable" parent="." unique_id=435517238 instance=ExtResource("12_dg77c")]
+[node name="XRToolsPickable" parent="." unique_id=835122625 instance=ExtResource("12_dg77c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.245836, 0.69140905, 20.700754)
 collision_layer = 3
 collision_mask = 3
