@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cbr1q1mrlxvdq"]
+
+[ext_resource type="Script" uid="uid://bwhh2e063a675" path="res://scripts/xr_tools_pickable.gd" id="1_iygrl"]
+[ext_resource type="ArrayMesh" uid="uid://yb3wga1xx3kt" path="res://assets/_OBJ/Onigiri.obj" id="2_sv2up"]
+[ext_resource type="PackedScene" uid="uid://dhdk41d6d3qv1" path="res://assets/models/Onigiri.glb" id="3_pixb3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mjxxv"]
+points = PackedVector3Array(0.29999998, 3.253074, 0.8257835, -0.8776871, 0.3640273, -0.59999996, 0.79999995, 0.6685017, -1.4352218, 0.3379134, 0.39575374, 1.8412201, -0.55059904, 1.8560215, 1.8412201, -0.5, 2.9737463, -1.0468668, 0.79999995, 2.7617285, -0.8971073, 0.98249245, 0.36435032, 0.59999996, -0.55059904, 1.8560215, -1.8412201, 0.79999995, 2.2831845, 1.2557254, -0.6976052, 2.7641387, 0.9, -0.23330072, 0.39575374, -1.8412201, -0.8776871, 0.3640273, 0.59999996, 0.52844656, 1.8560215, -1.8412201, -0.19999999, 3.5568051, -0.39250958, 0.52844656, 1.8560215, 1.8412201, -0.6976052, 2.7641387, -0.9, -0.23330072, 0.39575374, 1.8412201, 0.98249245, 0.36435032, -0.59999996, 0.5, 3.1783853, -0.89533013, 0.79999995, 2.7617285, 0.8971073, -0.5, 3.1484785, 0.8723282, 0.29999998, 3.528459, 0.3852966, 0.79999995, 0.6685017, 1.4352218, 0.3379134, 0.39575374, -1.8412201, -0.7, 0.6598513, 1.4448242, -0.7, 0.6598513, -1.4448242, -0.19999999, 2.7151837, 1.3461989, -0.19999999, 2.9395556, -1.1778802, 0.79999995, 2.2831845, -1.2557254, -0.49048102, 3.3003476, -0.39999998, -0.19999999, 3.5568051, 0.39250958)
+
+[node name="XRToolsPickable" type="RigidBody3D" unique_id=435517238 groups=["items"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_iygrl")
+picked_up_layer = 65538
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2087595845]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+mesh = ExtResource("2_sv2up")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1394236171]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_mjxxv")
+
+[node name="Onigiri" parent="." unique_id=902098756 instance=ExtResource("3_pixb3")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)

@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bicxj22mve6i4"]
+
+[ext_resource type="Script" uid="uid://bwhh2e063a675" path="res://scripts/xr_tools_pickable.gd" id="1_gy80m"]
+[ext_resource type="PackedScene" uid="uid://csh3mfsamr0ky" path="res://assets/models/glasses.glb" id="3_cy5cv"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gy80m"]
+points = PackedVector3Array(-0.20711207, -0.007142842, 0.09288088, -0.0056027207, 0.38412705, 0.19999999, 0.08333344, 0.29523566, 0.19999999, 0.09286235, 0.29999998, 0.082855545, -0.32142854, 0.40714282, 0.09288088, -0.2849033, 0.10476434, 0.19999999, -0.0056027207, 0.015872933, 0.19999999, -0.32142854, 0.40714282, 0.20714281, 0.107142866, 0.09285994, 0.09288088, 0.007089734, 0.40714282, 0.09288088, -0.30712324, 0.09285994, 0.09288088, 0.007089734, -0.007142842, 0.09288088, -0.007215552, 0.19286272, 0.078571394, 0.08333344, 0.10476434, 0.19999999, -0.19600442, 0.015872933, 0.19999999, 0.107142866, 0.19286272, 0.078571394, -0.007215552, 0.30714005, 0.078571394, -0.32142854, 0.19286272, 0.09288088, -0.2976191, 0.19365574, 0.19999999)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p30q8"]
+points = PackedVector3Array(0.10714285, 0.19287951, 0.07857138, -0.0071428567, 0.0928781, -0.50714284, 0.10714285, 0.0928781, -0.50714284, -0.0071428567, 0.30714285, -0.50714284, -0.01132405, 0.19235773, 0.099999994, 0.10714285, 0.30714285, 0.07857138, 0.10714285, 0.30714285, -0.50714284, -0.01132405, 0.31498182, 0.099999994, 0.10714285, 0.0928781, -0.39276344, -0.0071428567, 0.0928781, -0.39276344)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cy5cv"]
+points = PackedVector3Array(-0.7070714, -0.007142842, 0.09288088, -0.32152355, 0.40714282, 0.20714281, -0.32152355, 0.19286272, 0.20714281, -0.780164, 0.10476434, 0.19999999, -0.7070714, 0.40714282, 0.09288088, -0.32152355, 0.19286272, 0.09288088, -0.6912117, 0.38412705, 0.19999999, -0.500841, 0.015872933, 0.19999999, -0.32152355, 0.40714282, 0.09288088, -0.80714273, 0.19286272, 0.078571394, -0.780164, 0.29523566, 0.19999999, -0.5030796, 0.02236465, 0.099999994, -0.6912117, 0.015872933, 0.19999999, -0.80714273, 0.09285994, 0.09288088, -0.7909613, 0.29999998, 0.082855545, -0.69280946, 0.30714005, 0.078571394, -0.69280946, 0.19286272, 0.078571394)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lra0v"]
+points = PackedVector3Array(-0.6886759, 0.19235773, 0.099999994, -0.8071428, 0.0928781, -0.50714284, -0.6928571, 0.0928781, -0.50714284, -0.8071428, 0.30714285, -0.50714284, -0.6928571, 0.30714285, -0.50714284, -0.8071428, 0.30714285, 0.07857138, -0.6886759, 0.31498182, 0.099999994, -0.8071428, 0.19287951, 0.07857138, -0.8071428, 0.0928781, -0.39276344, -0.6928571, 0.0928781, -0.39276344)
+
+[node name="XRToolsPickable" type="RigidBody3D" unique_id=435517238 groups=["items"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_gy80m")
+picked_up_layer = 65538
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2087595845]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=1240410240]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_gy80m")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=793351747]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_p30q8")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1148053775]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_cy5cv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1516585193]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_lra0v")
+
+[node name="glasses" parent="." unique_id=218605808 instance=ExtResource("3_cy5cv")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)

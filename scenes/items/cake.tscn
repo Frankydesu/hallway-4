@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dj3u06tnj1551"]
+
+[ext_resource type="Script" uid="uid://bwhh2e063a675" path="res://scripts/xr_tools_pickable.gd" id="1_pqoqo"]
+[ext_resource type="PackedScene" uid="uid://wp7nmwbdyyd3" path="res://assets/models/Cake.glb" id="2_qtxjs"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_e67d4"]
+points = PackedVector3Array(-2, 0.0015127311, -2.9761615, -2.047619, 2.1423721, -3.0470226, -2.047619, 2.1423721, 3.0470226, 2, 0.0015127311, 2.9761615, 2, 0.0015127311, -2.9761615, -2, 0.0015127311, 2.9761615, 2.047619, 2.1423721, -3.0470226, 2.047619, 2.1423721, 3.0470226, -0.04407663, 4, -0.1773142, 0.21015722, 3.8999999, 0.08385196, 0.21015722, 3.8999999, -0.1682313, -0.041818805, 3.8999999, 0.08385196)
+
+[node name="XRToolsPickable" type="RigidBody3D" unique_id=435517238 groups=["items"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_pqoqo")
+picked_up_layer = 65538
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2087595845]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=76310522]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_e67d4")
+
+[node name="Cake" parent="." unique_id=1872769167 instance=ExtResource("2_qtxjs")]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)

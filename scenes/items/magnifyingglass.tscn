@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bbr1d1u1hei2y"]
+
+[ext_resource type="Script" uid="uid://bwhh2e063a675" path="res://scripts/xr_tools_pickable.gd" id="1_au0cw"]
+[ext_resource type="PackedScene" uid="uid://bybxgen3sbi2x" path="res://assets/models/magnifyingglass.glb" id="2_htynh"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c67er"]
+points = PackedVector3Array(0.8992264, -0.010317463, 0.11507933, 1.1055555, 0.11349206, 0.6103174, 1.1055555, -0.010317463, 0.6103174, 1.111838, 0.11726189, 0.099999994, 0.8992264, 0.11349206, 0.6103174, 0.892944, 0.11726189, 0.099999994, 0.8992264, -0.010317463, 0.6103174, 1.1055555, -0.010317463, 0.11507933)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_w7sbx"]
+points = PackedVector3Array(0.627274, 1.3877788e-17, -0.48520923, 1.4149987, 0.21666665, -0.09126985, 1.2085888, 0.21666665, 0.11507934, 0.7960923, 0.21666665, -0.71031743, 1.3774879, 0, -0.48520923, 1.1898427, 1.3877788e-17, 0.07756131, 0.5897633, 0.21666665, -0.09126985, 0.8148458, -2.7755576e-17, 0.07756131, 1.4149987, 0.21666665, -0.50396824, 1.1898427, -1.3877788e-17, -0.6727994, 0.5897633, 0.21666665, -0.50396824, 0.7960923, 0.21666665, 0.11507934, 1.2085888, 0.21666665, -0.71031743, 1.3774879, 0, -0.11002887, 0.627274, 1.3877788e-17, -0.11002887, 0.8148458, -2.7755576e-17, -0.6727994)
+
+[node name="XRToolsPickable" type="RigidBody3D" unique_id=435517238 groups=["items"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_au0cw")
+picked_up_layer = 65538
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2087595845]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=472686853]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_c67er")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=711564507]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_w7sbx")
+
+[node name="magnifyingglass" parent="." unique_id=1636645434 instance=ExtResource("2_htynh")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)

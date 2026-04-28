@@ -11,9 +11,20 @@
 [ext_resource type="PackedScene" uid="uid://c2q5phg8w08o" path="res://addons/godot-xr-tools/functions/movement_jump.tscn" id="7_dg77c"]
 [ext_resource type="PackedScene" uid="uid://clt88d5d1dje4" path="res://addons/godot-xr-tools/functions/movement_crouch.tscn" id="8_ycdy4"]
 [ext_resource type="Script" uid="uid://b6xepw2vasxc" path="res://scripts/game_manager.gd" id="11_dg77c"]
-[ext_resource type="PackedScene" uid="uid://doeo16pr0u53i" path="res://hallwaymap.tscn" id="11_efxa6"]
-[ext_resource type="PackedScene" uid="uid://ci5f4uu7rxufh" path="res://xr_tools_pickable.tscn" id="12_dg77c"]
-[ext_resource type="PackedScene" uid="uid://co5iwfllgddqj" path="res://KeyItem.tscn" id="12_w48qg"]
+[ext_resource type="PackedScene" uid="uid://doeo16pr0u53i" path="res://scenes/hallwaymap.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://ci5f4uu7rxufh" path="res://scenes/xr_tools_pickable.tscn" id="12_dg77c"]
+[ext_resource type="PackedScene" uid="uid://dvgd7ih2qg68g" path="res://scenes/items/headphone.tscn" id="14_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://caoee1q4i063i" path="res://scenes/items/speaker.tscn" id="15_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://cwei72smo6pli" path="res://scenes/items/airpod.tscn" id="16_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://dj3u06tnj1551" path="res://scenes/items/cake.tscn" id="17_muem4"]
+[ext_resource type="PackedScene" uid="uid://c14d6028dihnd" path="res://scenes/items/bread.tscn" id="18_dp3eg"]
+[ext_resource type="PackedScene" uid="uid://cbr1q1mrlxvdq" path="res://scenes/items/onigiri.tscn" id="19_0ld40"]
+[ext_resource type="PackedScene" uid="uid://n7f4jqpyit5y" path="res://scenes/items/bluebag.tscn" id="20_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://dcpnwm42l6wd4" path="res://scenes/items/greenbag.tscn" id="21_yc10j"]
+[ext_resource type="PackedScene" uid="uid://b6cupy86nbve7" path="res://scenes/items/blackbag.tscn" id="22_jscy8"]
+[ext_resource type="PackedScene" uid="uid://bicxj22mve6i4" path="res://scenes/items/glasses.tscn" id="23_og1vs"]
+[ext_resource type="PackedScene" uid="uid://bbr1d1u1hei2y" path="res://scenes/items/magnifyingglass.tscn" id="24_2wyq8"]
+[ext_resource type="PackedScene" uid="uid://g15uuu7u5q1o" path="res://scenes/items/mirror.tscn" id="25_vxglm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_272bh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -48,6 +59,7 @@ size = Vector3(1, 2, 1)
 script = ExtResource("1_ig7tw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=154823209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3197975, 0.8349894, 18.692764)
 visible = false
 light_color = Color(0, 0, 0, 1)
 
@@ -55,7 +67,7 @@ light_color = Color(0, 0, 0, 1)
 environment = SubResource("Environment_kek77")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1962933389]
-transform = Transform3D(-4.3711392e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.3711392e-08, 22.792648, 0, 20.676205)
+transform = Transform3D(-4.3711392e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.3711392e-08, 15.120001, 0, 20.676205)
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=485495141]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
@@ -122,30 +134,27 @@ shape = SubResource("BoxShape3D_dg77c")
 [node name="HallWay" parent="." unique_id=467713607 instance=ExtResource("11_efxa6")]
 transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)
 
-[node name="XRToolsPickable5" parent="." unique_id=435517238 instance=ExtResource("12_w48qg")]
-transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 10.275693, 1.519101, 20.698385)
-
 [node name="GameManager" type="Node3D" parent="." unique_id=2005501150 node_paths=PackedStringArray("victory_door")]
 script = ExtResource("11_dg77c")
 victory_door = NodePath("../VictoryDoor")
 
 [node name="XRToolsPickable" parent="." unique_id=835122625 instance=ExtResource("12_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.245836, 0.69140905, 20.700754)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8302875, 0.69140905, 15.259013)
 collision_layer = 3
 collision_mask = 3
 
 [node name="XRToolsPickable2" parent="." unique_id=1546777579 instance=ExtResource("12_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.197655, 0.69140893, 20.683958)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.4496565, 0.69140893, 14.756353)
 collision_layer = 3
 collision_mask = 3
 
 [node name="XRToolsPickable3" parent="." unique_id=2027144093 instance=ExtResource("12_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.604192, 0.6914088, 20.613544)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.858808, 0.6914088, 15.345553)
 collision_layer = 3
 collision_mask = 3
 
 [node name="XRToolsPickable4" parent="." unique_id=1886593252 instance=ExtResource("12_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.795877, 0.69140893, 20.598894)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.49205, 0.69140893, 15.114809)
 collision_layer = 3
 collision_mask = 3
 
@@ -157,6 +166,42 @@ mesh = SubResource("QuadMesh_dg77c")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VictoryDoor" unique_id=1470286015]
 shape = SubResource("BoxShape3D_ycdy4")
+
+[node name="Headphone" parent="." unique_id=435517238 instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7228613, 0.26534152, 21.244396)
+
+[node name="Speaker" parent="." unique_id=1560869026 instance=ExtResource("15_jkv2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.565346, 0.19140868, 20.088337)
+
+[node name="Airpod" parent="." unique_id=852080384 instance=ExtResource("16_jbj1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.623155, 0.19140914, 19.238964)
+
+[node name="Cake" parent="." unique_id=224302094 instance=ExtResource("17_muem4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0591636, 0.19140881, 21.142118)
+
+[node name="Bread" parent="." unique_id=1094519795 instance=ExtResource("18_dp3eg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.065959, 0.19154075, 20.159016)
+
+[node name="Onigiri" parent="." unique_id=1049027922 instance=ExtResource("19_0ld40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1870613, 0.19140905, 19.385502)
+
+[node name="BlueBag" parent="." unique_id=1505509971 instance=ExtResource("20_gqmmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.794667, 0.19140884, 21.826155)
+
+[node name="GrrenBag" parent="." unique_id=1890529597 instance=ExtResource("21_yc10j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.813208, 0.19140884, 21.018663)
+
+[node name="BlackBag" parent="." unique_id=189853000 instance=ExtResource("22_jscy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.783365, 0.19140968, 20.111897)
+
+[node name="Glasses" parent="." unique_id=12235561 instance=ExtResource("23_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.858538, 0.19140889, 21.243158)
+
+[node name="MagnifyingGlass" parent="." unique_id=1354579411 instance=ExtResource("24_2wyq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.44783, 0.19140878, 20.51303)
+
+[node name="Mirror" parent="." unique_id=1601948756 instance=ExtResource("25_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.027378, 0.19140904, 19.712685)
 
 [connection signal="key_collected" from="XRToolsPickable" to="GameManager" method="on_key_collected"]
 [connection signal="picked_up" from="XRToolsPickable" to="XRToolsPickable" method="_on_picked_up"]

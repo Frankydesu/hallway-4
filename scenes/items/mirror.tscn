@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://g15uuu7u5q1o"]
+
+[ext_resource type="Script" uid="uid://bwhh2e063a675" path="res://scripts/xr_tools_pickable.gd" id="1_yaohh"]
+[ext_resource type="PackedScene" uid="uid://b7kxmw8c7lwp1" path="res://assets/models/mirror.glb" id="3_vngef"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_w4w0a"]
+points = PackedVector3Array(2.2977076, -0.015079364, 0.7149495, 3.111822, 0.22619046, 0.3228801, 3.0590544, -1.3877788e-17, 0.2889685, 2.267543, 0.10555555, -0.6117749, 3.111822, -0.015079364, -0.6117749, 2.2977076, 0.22619046, 0.7149495, 3.111822, 0.22619046, -0.6117749, 2.267543, -0.015079364, -0.6117749, 2.6294358, -0.015079364, 0.7149495, 2.267543, 0.22619046, 0.473656, 2.8705876, 0.22619046, -0.6117749, 2.6294358, 0.22619046, 0.7149495, 2.267543, -0.015079364, 0.62443197, 2.8102584, 0.22619046, 0.62443197, 2.267543, 0.22619046, 0.62443197)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yaohh"]
+points = PackedVector3Array(1.7849207, 0.22619046, -0.61178374, 2.267366, 0.22619046, 0.62448215, 2.267366, -0.015079364, 0.62448215, 2.267366, -0.015079364, -0.61178374, 1.8150735, -1.3877788e-17, 0.2833473, 1.7849207, -0.015079364, -0.61178374, 1.7849207, 0.22619046, 0.32291847, 2.026167, 0.22619046, -0.61178374, 2.267366, 0.10555555, -0.61178374, 2.0864313, -0.015079364, 0.62448215, 2.0864313, 0.22619046, 0.62448215, 2.267366, 0.22619046, 0.4737003)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p2038"]
+points = PackedVector3Array(3.0214286, 0.22619046, -0.61196375, 2.2109694, 1.3877788e-17, -1.1773293, 1.8753967, -0.015079364, -0.913492, 1.8753967, 0.22619046, -0.913492, 2.7197764, 0.22619046, -1.2150203, 3.0214286, -0.015079364, -0.913492, 1.8753967, -0.015079364, -0.61196375, 1.8753967, 0.22619046, -0.61196375, 3.0214286, -0.015079364, -0.61196375, 2.177049, 0.22619046, -1.2150203, 2.6858559, 1.3877788e-17, -1.1773293, 3.0214286, 0.22619046, -0.913492)
+
+[node name="XRToolsPickable" type="RigidBody3D" unique_id=435517238 groups=["items"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_yaohh")
+picked_up_layer = 65538
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2087595845]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=77816480]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_w4w0a")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1782294511]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_yaohh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=596477538]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_p2038")
+
+[node name="mirror" parent="." unique_id=1567779233 instance=ExtResource("3_vngef")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
