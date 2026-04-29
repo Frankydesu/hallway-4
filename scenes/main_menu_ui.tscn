@@ -1,8 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://ca6fy65mal5kx"]
+[gd_scene format=3 uid="uid://ca6fy65mal5kx"]
 
-[ext_resource type="Script" path="res://scripts/main_menu_ui.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://bhu5rkluwy1me" path="res://scripts/main_menu_ui.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://c65f43n2tdj4" path="res://assets/Ui/Noxon-01.png" id="2_qooff"]
+[ext_resource type="Texture2D" uid="uid://bbf26v4ky4246" path="res://assets/Ui/Noxon-03.png" id="3_mwf8v"]
+[ext_resource type="Texture2D" uid="uid://bkomn0no0ed15" path="res://assets/Ui/Noxon-05.png" id="4_mtm5c"]
+[ext_resource type="Texture2D" uid="uid://cxxlcm6okpfu4" path="res://assets/Ui/Noxon-04.png" id="5_sbo6t"]
+[ext_resource type="Texture2D" uid="uid://b8l5cgiy8vgk4" path="res://assets/Ui/Noxon-06.png" id="6_5tirf"]
+[ext_resource type="Texture2D" uid="uid://dmvsahphhdqve" path="res://assets/Ui/Noxon-08.png" id="7_73ijk"]
+[ext_resource type="Texture2D" uid="uid://daxh2wdf45uqn" path="res://assets/Ui/Noxon-07.png" id="8_lju1q"]
 
-[node name="MainMenuUI" type="Control"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bet7a"]
+texture = ExtResource("3_mwf8v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xife4"]
+texture = ExtResource("4_mtm5c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wsifg"]
+texture = ExtResource("5_sbo6t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4caof"]
+texture = ExtResource("6_5tirf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ioy7m"]
+texture = ExtResource("7_73ijk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8njc"]
+texture = ExtResource("8_lju1q")
+
+[node name="MainMenuUI" type="Control" unique_id=897899381]
 custom_minimum_size = Vector2(1024, 600)
 layout_mode = 3
 anchors_preset = 15
@@ -12,47 +37,60 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
 
-[node name="BackgroundColor" type="ColorRect" parent="."]
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=1774744740]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0784314, 0.0784314, 0.0980392, 1)
+color = Color(1, 1, 1, 0)
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1569205147]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 80.0
+offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=665471848]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 72
-text = "HALLWAY 4"
-horizontal_alignment = 1
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/VBoxContainer" unique_id=237636300]
+position = Vector2(150, 100)
+scale = Vector2(0.47916663, 0.4791667)
+texture = ExtResource("2_qooff")
 
-[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer"]
+[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1000116920]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 
-[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 60)
+[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer" unique_id=2139849740]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "START GAME"
 
-[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Spacer3" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1380755912]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1651980532]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 60)
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "QUIT"
+theme_override_styles/normal = SubResource("StyleBoxTexture_bet7a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xife4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wsifg")
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1665814866]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_4caof")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ioy7m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h8njc")
