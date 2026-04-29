@@ -22,6 +22,10 @@ func spawn_victory_way():
 	print("Victory! The path is open.")
 	victory_door.show()
 	# You can add a sound effect or light here too!
+	win_game()
+
+func win_game():
+	get_tree().change_scene_to_file("res://scenes/win_screen_vr.tscn")
 
 
 func _on_xr_tools_pickable_key_collected() -> void:
